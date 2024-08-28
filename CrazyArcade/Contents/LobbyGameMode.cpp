@@ -25,8 +25,6 @@ void ALobbyGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	MouseUI = GetWorld()->SpawnActor<AMouse>("MouseUIActor");
-
 	{
 		UEngineSprite::CreateCutting("Button_GameStart_Hover.png", 1, 3);
 		UEngineSprite::CreateCutting("Button_Ready_Hover.png", 1, 3);
@@ -36,7 +34,11 @@ void ALobbyGameMode::BeginPlay()
 		UEngineSprite::CreateCutting("Button_Back_Hover.png", 1, 2);
 		UEngineSprite::CreateCutting("Button_Exit_Hover.png", 1, 2);
 	}
+
 	{
+		// MouseCursor
+		MouseUI = GetWorld()->SpawnActor<AMouse>("MouseUIActor");
+
 		// UserInfos
 		{
 			for (int i = 0; i < 8; i++)

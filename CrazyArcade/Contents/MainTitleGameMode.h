@@ -44,6 +44,7 @@ protected:
 private:
 	void StringToText();
 	
+	// MouseCursor
 	std::shared_ptr<AMouse> MouseUI = nullptr;
 
 	// UI
@@ -83,6 +84,6 @@ private:
 	float FadeAlpha = 0.0f;
 	void FadeOut(float _DeltaTime);
 
-	// »ç¿îµå
+	// Sound
 	UEngineSoundPlayer BgmPlayer;
 };

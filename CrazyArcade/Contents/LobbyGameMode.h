@@ -159,8 +159,11 @@ private:
 	std::string Chat = "";
 	std::string Chat_Prev = "";
 
-
+	// MouseCursor
 	std::shared_ptr<AMouse> MouseUI = nullptr;
+
+	// Sound
+	UEngineSoundPlayer BgmPlayer;
 
 	void SettingPanel(ECharacterType _CharacterType);
 	void SettingCharacterSelect(ECharacterType _CharacterType);
@@ -175,7 +178,4 @@ private:
 	void ChangeReady(bool _IsReady);
 	void ChangeMap(EMapType _MapType);
 	void ChangeFadeOut(bool _IsFadeOut);
-
-	// »ç¿îµå
-	UEngineSoundPlayer BgmPlayer;
 };
